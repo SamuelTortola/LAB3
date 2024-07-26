@@ -2,10 +2,10 @@
 // Universidad Del Valle De Guatemala
 // IE2023: Electrónica digital 2
 // Autor: Samuel Tortola - 22094
-// Proyecto: Laboratorio 2
+// Proyecto: Laboratorio 3
 // Hardware: Atmega238p
 // Creado: 18/07/2024
-//Última modificación: 19/07/2024
+//Última modificación: 26/07/2024
 //******************************************************************************
 
 
