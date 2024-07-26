@@ -15,6 +15,9 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 SPI/SPI.o
+ .data          0x00000000        0x0 SPI/SPI.o
+ .bss           0x00000000        0x0 SPI/SPI.o
  .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -66,6 +69,7 @@ Address of section .data set to 0x800100
 LOAD D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD ADC/ADC.o
 LOAD main.o
+LOAD SPI/SPI.o
 START GROUP
 LOAD d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
 END GROUP
@@ -175,7 +179,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x164
+.text           0x00000000      0x212
  *(.vectors)
  .vectors       0x00000000       0x68 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -243,7 +247,6 @@ END GROUP
                 0x0000008c                __vector_25
                 0x0000008c                __vector_11
                 0x0000008c                __vector_13
-                0x0000008c                __vector_17
                 0x0000008c                __vector_19
                 0x0000008c                __vector_7
                 0x0000008c                __vector_5
@@ -261,18 +264,26 @@ END GROUP
  *(.text.*)
  .text.initADC  0x00000090       0x40 ADC/ADC.o
                 0x00000090                initADC
- .text.setup    0x000000d0       0x12 main.o
+ .text.setup    0x000000d0       0x1a main.o
                 0x000000d0                setup
- .text.main     0x000000e2       0x10 main.o
-                0x000000e2                main
+ .text.main     0x000000ea       0x1c main.o
+                0x000000ea                main
  .text.__vector_21
-                0x000000f2       0x6e main.o
-                0x000000f2                __vector_21
-                0x00000160                . = ALIGN (0x2)
+                0x00000106       0x6e main.o
+                0x00000106                __vector_21
+ .text.__vector_17
+                0x00000174       0x52 main.o
+                0x00000174                __vector_17
+ .text.SPI_init
+                0x000001c6       0x3e SPI/SPI.o
+                0x000001c6                SPI_init
+ .text.SPI_tx   0x00000204        0xa SPI/SPI.o
+                0x00000204                SPI_tx
+                0x0000020e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000160        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000160                _exit
-                0x00000160                exit
+ .fini9         0x0000020e        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000020e                _exit
+                0x0000020e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -291,11 +302,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000160        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000020e        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000164                _etext = .
+                0x00000212                _etext = .
 
-.data           0x00800100        0x0 load address 0x00000164
+.data           0x00800100        0x0 load address 0x00000212
                 [!provide]                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -319,8 +330,8 @@ END GROUP
                 0x00800102                caso
  *(COMMON)
                 0x00800103                PROVIDE (__bss_end, .)
-                0x00000164                __data_load_start = LOADADDR (.data)
-                0x00000164                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000212                __data_load_start = LOADADDR (.data)
+                0x00000212                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800103        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
@@ -371,6 +382,7 @@ END GROUP
  .comment       0x00000000       0x30 ADC/ADC.o
                                  0x31 (size before relaxing)
  .comment       0x00000030       0x31 main.o
+ .comment       0x00000030       0x31 SPI/SPI.o
 
 .note.gnu.avr.deviceinfo
                 0x00000000       0x40
@@ -392,50 +404,58 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x50
+.debug_aranges  0x00000000       0x80
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 ADC/ADC.o
  .debug_aranges
-                0x00000020       0x30 main.o
+                0x00000020       0x38 main.o
+ .debug_aranges
+                0x00000058       0x28 SPI/SPI.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x790
+.debug_info     0x00000000      0x912
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_info    0x000005f4       0x82 ADC/ADC.o
- .debug_info    0x00000676      0x11a main.o
+ .debug_info    0x00000676      0x1f6 main.o
+ .debug_info    0x0000086c       0xa6 SPI/SPI.o
 
-.debug_abbrev   0x00000000      0x6a9
+.debug_abbrev   0x00000000      0x7b9
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2       0x4f ADC/ADC.o
- .debug_abbrev  0x000005f1       0xb8 main.o
+ .debug_abbrev  0x000005f1      0x152 main.o
+ .debug_abbrev  0x00000743       0x76 SPI/SPI.o
 
-.debug_line     0x00000000      0x33c
+.debug_line     0x00000000      0x4e0
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_line    0x00000134       0xca ADC/ADC.o
- .debug_line    0x000001fe      0x13e main.o
+ .debug_line    0x000001fe      0x1eb main.o
+ .debug_line    0x000003e9       0xf7 SPI/SPI.o
 
-.debug_frame    0x00000000       0x84
+.debug_frame    0x00000000      0x110
  *(.debug_frame)
  .debug_frame   0x00000000       0x24 ADC/ADC.o
- .debug_frame   0x00000024       0x60 main.o
+ .debug_frame   0x00000024       0xb8 main.o
+ .debug_frame   0x000000dc       0x34 SPI/SPI.o
 
-.debug_str      0x00000000      0x422
+.debug_str      0x00000000      0x4a4
  *(.debug_str)
  .debug_str     0x00000000      0x208 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_str     0x00000208      0x16d ADC/ADC.o
                                 0x1a1 (size before relaxing)
- .debug_str     0x00000375       0xad main.o
-                                0x1d4 (size before relaxing)
+ .debug_str     0x00000375      0x11d main.o
+                                0x244 (size before relaxing)
+ .debug_str     0x00000492       0x12 SPI/SPI.o
+                                0x1b7 (size before relaxing)
 
-.debug_loc      0x00000000       0x56
+.debug_loc      0x00000000      0x134
  *(.debug_loc)
- .debug_loc     0x00000000       0x56 main.o
+ .debug_loc     0x00000000      0x134 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -455,10 +475,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x30
+.debug_ranges   0x00000000       0x50
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 ADC/ADC.o
- .debug_ranges  0x00000010       0x20 main.o
+ .debug_ranges  0x00000010       0x28 main.o
+ .debug_ranges  0x00000038       0x18 SPI/SPI.o
 
 .debug_macro
  *(.debug_macro)

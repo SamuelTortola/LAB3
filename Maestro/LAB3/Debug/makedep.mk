@@ -4,5 +4,9 @@
 
 main.c
 
+POT\pot.c
+
+SPI\SPI.c
+
 UART\UART.c
 

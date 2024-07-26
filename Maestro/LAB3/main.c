@@ -18,8 +18,10 @@
 #include <stdlib.h>
 
 #include "UART/UART.h"
+#include "SPI/SPI.h"
+#include "POT/POT.h"
 
-
+uint8_t datoRecibido = 0x00;
 
 uint8_t activa = 0;
 volatile char receivedChar = 0;    //Variable que almacena el valor del UART
@@ -28,10 +30,10 @@ void setup(void);
 void setup(void){
 	cli();  //Apagar interrupciones
 	DDRD = 0xFF;  //Puerto D como salida
-	DDRB = 0xFF;  //Puerto B como salida
 	DDRC = 0;  //Puerto C como entrada
 	
-	initUART9600();
+	initUART9600();  //Iniciar UART
+	SPI_init();
 	
 
 	
@@ -63,11 +65,22 @@ int main(void)
 		}
 		
 		if(receivedChar != 0){      //Si la variable que hay en USART es diferente de cero
+			SPI_slaveON(2);
+			SPI_tx(4);
+			datoRecibido = SPI_rx();
+			SPI_slaveOFF(2);
 			
+			if (datoRecibido >= 4)
+			{
+				writeTextUART("si funciona el escalavo");
+			}
+			//writeTextUART("888");
+			
+			receivedChar = 0;
     }
 	
 	
-	
+
 	
 }
 }
@@ -78,5 +91,5 @@ ISR(USART_RX_vect)
 	receivedChar = UDR0; // Almacena el carácter recibido
 	
 	while(!(UCSR0A & (1<<UDRE0)));    //Mientras haya caracteres
-	UDR0  = receivedChar;
+	
 }

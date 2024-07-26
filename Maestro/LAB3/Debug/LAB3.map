@@ -1,11 +1,17 @@
 Archive member included to satisfy reference by file (symbol)
 
+d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                              POT/pot.o (__divmodhi4)
 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
+d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                              POT/pot.o (__tablejump2__)
 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               main.o (__do_copy_data)
 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
                               main.o (__do_clear_bss)
+d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                              d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o) (__udivmodhi4)
 
 Discarded input sections
 
@@ -14,9 +20,51 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .text          0x00000000        0x0 POT/pot.o
+ .data          0x00000000        0x0 POT/pot.o
+ .bss           0x00000000        0x0 POT/pot.o
+ .rodata.str1.1
+                0x00000000       0x30 POT/pot.o
+ .text.POT      0x00000000      0x4d6 POT/pot.o
+ .progmem.gcc_sw_table.POT
+                0x00000000       0x78 POT/pot.o
+ .data.lista    0x00000000        0xa POT/pot.o
+ .bss.unidades  0x00000000        0x2 POT/pot.o
+ .bss.decenas   0x00000000        0x2 POT/pot.o
+ .bss.centenas  0x00000000        0x2 POT/pot.o
+ .bss.millares  0x00000000        0x2 POT/pot.o
+ .debug_info    0x00000000      0x42a POT/pot.o
+ .debug_abbrev  0x00000000       0xd3 POT/pot.o
+ .debug_loc     0x00000000       0xac POT/pot.o
+ .debug_aranges
+                0x00000000       0x20 POT/pot.o
+ .debug_ranges  0x00000000       0x10 POT/pot.o
+ .debug_line    0x00000000      0x3c6 POT/pot.o
+ .debug_str     0x00000000      0x1f5 POT/pot.o
+ .comment       0x00000000       0x31 POT/pot.o
+ .debug_frame   0x00000000       0x38 POT/pot.o
+ .text          0x00000000        0x0 SPI/SPI.o
+ .data          0x00000000        0x0 SPI/SPI.o
+ .bss           0x00000000        0x0 SPI/SPI.o
  .text          0x00000000        0x0 UART/UART.o
  .data          0x00000000        0x0 UART/UART.o
  .bss           0x00000000        0x0 UART/UART.o
+ .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.div
+                0x00000000       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc   0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
@@ -33,6 +81,22 @@ Discarded input sections
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  .text.libgcc.fixed
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.div
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc   0x00000000        0xc d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
  .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
  .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
@@ -65,6 +129,22 @@ Discarded input sections
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
  .text.libgcc.fixed
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x00000000       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc   0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
 
 Memory Configuration
 
@@ -83,6 +163,8 @@ Linker script and memory map
 Address of section .data set to 0x800100
 LOAD D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
 LOAD main.o
+LOAD POT/pot.o
+LOAD SPI/SPI.o
 LOAD UART/UART.o
 START GROUP
 LOAD d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
@@ -193,7 +275,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x1ac
+.text           0x00000000      0x242
  *(.vectors)
  .vectors       0x00000000       0x68 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -279,27 +361,40 @@ END GROUP
                 0x000000a2                __vector_20
                 0x000000a6                . = ALIGN (0x2)
  *(.text.*)
- .text.setup    0x000000a6       0x12 main.o
+ .text.setup    0x000000a6       0x14 main.o
                 0x000000a6                setup
- .text.main     0x000000b8       0x5a main.o
-                0x000000b8                main
+ .text.main     0x000000ba       0x8c main.o
+                0x000000ba                main
  .text.__vector_18
-                0x00000112       0x30 main.o
-                0x00000112                __vector_18
+                0x00000146       0x28 main.o
+                0x00000146                __vector_18
+ .text.SPI_init
+                0x0000016e       0x3e SPI/SPI.o
+                0x0000016e                SPI_init
+ .text.SPI_slaveON
+                0x000001ac        0xc SPI/SPI.o
+                0x000001ac                SPI_slaveON
+ .text.SPI_slaveOFF
+                0x000001b8        0xc SPI/SPI.o
+                0x000001b8                SPI_slaveOFF
+ .text.SPI_tx   0x000001c4        0xa SPI/SPI.o
+                0x000001c4                SPI_tx
+ .text.SPI_rx   0x000001ce        0xa SPI/SPI.o
+                0x000001ce                SPI_rx
  .text.initUART9600
-                0x00000142       0x36 UART/UART.o
-                0x00000142                initUART9600
+                0x000001d8       0x36 UART/UART.o
+                0x000001d8                initUART9600
  .text.writeTextUART
-                0x00000178       0x22 UART/UART.o
-                0x00000178                writeTextUART
+                0x0000020e       0x22 UART/UART.o
+                0x0000020e                writeTextUART
  .text.writeUART
-                0x0000019a        0xe UART/UART.o
-                0x0000019a                writeUART
-                0x000001a8                . = ALIGN (0x2)
+                0x00000230        0xe UART/UART.o
+                0x00000230                writeUART
+                0x0000023e                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000001a8        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x000001a8                _exit
-                0x000001a8                exit
+ .fini9         0x0000023e        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x0000023e                _exit
+                0x0000023e                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -318,11 +413,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000001a8        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x0000023e        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x000001ac                _etext = .
+                0x00000242                _etext = .
 
-.data           0x00800100       0x92 load address 0x000001ac
+.data           0x00800100       0x94 load address 0x00000242
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -330,32 +425,34 @@ END GROUP
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800100       0x91 main.o
+                0x00800100       0x94 main.o
  *(.gnu.linkonce.r*)
-                0x00800192                . = ALIGN (0x2)
- *fill*         0x00800191        0x1 
-                0x00800192                _edata = .
-                0x00800192                PROVIDE (__data_end, .)
+                0x00800194                . = ALIGN (0x2)
+                0x00800194                _edata = .
+                0x00800194                PROVIDE (__data_end, .)
 
-.bss            0x00800192        0x2
-                0x00800192                PROVIDE (__bss_start, .)
+.bss            0x00800194        0x3
+                0x00800194                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.receivedChar
-                0x00800192        0x1 main.o
-                0x00800192                receivedChar
- .bss.activa    0x00800193        0x1 main.o
-                0x00800193                activa
+                0x00800194        0x1 main.o
+                0x00800194                receivedChar
+ .bss.activa    0x00800195        0x1 main.o
+                0x00800195                activa
+ .bss.datoRecibido
+                0x00800196        0x1 main.o
+                0x00800196                datoRecibido
  *(COMMON)
-                0x00800194                PROVIDE (__bss_end, .)
-                0x000001ac                __data_load_start = LOADADDR (.data)
-                0x0000023e                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800197                PROVIDE (__bss_end, .)
+                0x00000242                __data_load_start = LOADADDR (.data)
+                0x000002d6                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800194        0x0
+.noinit         0x00800197        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800194                _end = .
+                0x00800197                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -399,6 +496,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 SPI/SPI.o
  .comment       0x00000030       0x31 UART/UART.o
 
 .note.gnu.avr.deviceinfo
@@ -421,51 +519,60 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0x60
+.debug_aranges  0x00000000       0xa0
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 main.o
  .debug_aranges
-                0x00000030       0x30 UART/UART.o
+                0x00000030       0x40 SPI/SPI.o
+ .debug_aranges
+                0x00000070       0x30 UART/UART.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0x8e5
+.debug_info     0x00000000      0xab6
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0x1fc main.o
- .debug_info    0x000007f0       0xf5 UART/UART.o
+ .debug_info    0x000005f4      0x2b6 main.o
+ .debug_info    0x000008aa      0x117 SPI/SPI.o
+ .debug_info    0x000009c1       0xf5 UART/UART.o
 
-.debug_abbrev   0x00000000      0x73c
+.debug_abbrev   0x00000000      0x7db
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  .debug_abbrev  0x000005a2       0xe3 main.o
- .debug_abbrev  0x00000685       0xb7 UART/UART.o
+ .debug_abbrev  0x00000685       0x9f SPI/SPI.o
+ .debug_abbrev  0x00000724       0xb7 UART/UART.o
 
-.debug_line     0x00000000      0x3c4
+.debug_line     0x00000000      0x54c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000134      0x164 main.o
- .debug_line    0x00000298      0x12c UART/UART.o
+ .debug_line    0x00000134      0x194 main.o
+ .debug_line    0x000002c8      0x158 SPI/SPI.o
+ .debug_line    0x00000420      0x12c UART/UART.o
 
-.debug_frame    0x00000000       0x98
+.debug_frame    0x00000000       0xfc
  *(.debug_frame)
  .debug_frame   0x00000000       0x54 main.o
- .debug_frame   0x00000054       0x44 UART/UART.o
+ .debug_frame   0x00000054       0x64 SPI/SPI.o
+ .debug_frame   0x000000b8       0x44 UART/UART.o
 
-.debug_str      0x00000000      0x3f0
+.debug_str      0x00000000      0x445
  *(.debug_str)
  .debug_str     0x00000000      0x208 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x1c1 main.o
-                                0x1fa (size before relaxing)
- .debug_str     0x000003c9       0x27 UART/UART.o
+ .debug_str     0x00000208      0x1fe main.o
+                                0x237 (size before relaxing)
+ .debug_str     0x00000406       0x18 SPI/SPI.o
+                                0x1e1 (size before relaxing)
+ .debug_str     0x0000041e       0x27 UART/UART.o
                                 0x1ea (size before relaxing)
 
-.debug_loc      0x00000000       0x83
+.debug_loc      0x00000000       0xc5
  *(.debug_loc)
  .debug_loc     0x00000000       0x3c main.o
- .debug_loc     0x0000003c       0x47 UART/UART.o
+ .debug_loc     0x0000003c       0x42 SPI/SPI.o
+ .debug_loc     0x0000007e       0x47 UART/UART.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -485,10 +592,11 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x40
+.debug_ranges   0x00000000       0x70
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 main.o
- .debug_ranges  0x00000020       0x20 UART/UART.o
+ .debug_ranges  0x00000020       0x30 SPI/SPI.o
+ .debug_ranges  0x00000050       0x20 UART/UART.o
 
 .debug_macro
  *(.debug_macro)

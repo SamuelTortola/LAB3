@@ -8,8 +8,4 @@
 
 void POT(uint8_t VA1, uint8_t VA2);
 
-
-
-
-
-#endif 
+#endif

@@ -19,13 +19,10 @@
 
 
 #include "ADC/ADC.h"   //Incluir libreria de ADC
-#include "POT/POT.h"  //Incluir libreria de Manejo de potenciometros
-
+#include "SPI/SPI.h"
 
 
 uint8_t caso = 0, Val1 = 0, Val2 = 0;
-
-
 
 
 
@@ -33,12 +30,13 @@ void setup(void);
 void setup(void){
 	cli();  //Apagar interrupciones
 	DDRD = 0xFF;  //Puerto D como salida
-	DDRB = 0xFF;  //Puerto B como salida
 	DDRC = 0;  //Puerto C como entrada
 	
 	
 	initADC(); //Iniciar ADC
-	
+	SPI_init();
+	SPCR |= (1<<SPIE); //Activar interrupcion SPI
+		
 	sei(); //Activar interrupciones
 }
 
@@ -50,15 +48,15 @@ int main(void)
 	while (1)
 	{
 		
-		ADCSRA |=(1<<ADSC);  //Leer ADC
 		
+		
+		
+		ADCSRA |=(1<<ADSC);  //Leer ADC
+		_delay_ms(10);
+
+
 
 	}
-	
-		
-	
-	
-	
 }
 
 
@@ -81,6 +79,18 @@ ISR(ADC_vect){
 	}
 	
 	ADCSRA |= (1<<ADIF); //Se borra la bandera de interrupción
+}
+
+
+ISR(SPI_STC_vect){
+	uint8_t SPIVALOR = SPDR;
+	
+	if (SPIVALOR == 1)  //Si el maestro quiere ver el valor de los potenciometros
+	{
+		SPI_tx(Val1);
+	}
+	
+	
 }
 
 
