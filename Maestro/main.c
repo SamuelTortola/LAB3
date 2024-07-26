@@ -23,7 +23,7 @@
 
 
 
-uint8_t activa = 0, caso = 0, Val1 = 0, Val2 = 0, menu2 = 0;
+uint8_t activa = 0, caso = 0, Val1 = 0, Val2 = 0;
 volatile char receivedChar = 0;    //Variable que almacena el valor del UART
 
 int millares = 0;
@@ -83,24 +83,14 @@ int main(void)
 			writeTextUART("Lectura actual de potenciometro es:");
 			
 			
-			
-			// Dividir el carácter recibido en dos partes
-			uint8_t lower_bits = dato & 0b00111111; // Los 6 bits menos significativos
-			uint8_t upper_bits = (dato >> 6) & 0b11; // Los 2 bits más significativos
-
-			// Mostrar los 6 bits menos significativos en PORTB
-			PORTB = lower_bits;
-
-			// Mostrar los 2 bits más significativos en los pines PD6 y PD7 de PORTD
-			PORTD = (PORTD & ~0b11000000) | (upper_bits << 6);
-			
+		
 			
 			
 			//Obtener el dato del potenciometro descompuesto
-			int millares = dato/1000;
-			int centenas = (dato-(millares*1000))/100;
-			int decenas = (dato- (millares*1000 + centenas*100))/10;
-			int unidades = dato-(millares*1000 + centenas*100 + decenas*10 );
+			 millares = Val1/1000;
+			 centenas = (Val1-(millares*1000))/100;
+			 decenas = (Val1- (millares*1000 + centenas*100))/10;
+			 unidades = Val1-(millares*1000 + centenas*100 + decenas*10);
 			
 			
 			switch(centenas){   //Mostrar centenas
