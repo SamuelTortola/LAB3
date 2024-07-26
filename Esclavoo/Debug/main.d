@@ -18,7 +18,7 @@ main.d main.o: .././main.c \
  d:\programas\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdarg.h \
  d:\programas\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  d:\programas\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
- .././ADC/ADC.h .././UART/UART.h
+ .././ADC/ADC.h .././POT/POT.h
 
 d:\programas\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
 
@@ -60,4 +60,4 @@ d:\programas\microchip\ studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include
 
 .././ADC/ADC.h:
 
-.././UART/UART.h:
+.././POT/POT.h:

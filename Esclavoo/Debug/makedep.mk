@@ -6,5 +6,3 @@ ADC\ADC.c
 
 main.c
 
-UART\UART.c
-

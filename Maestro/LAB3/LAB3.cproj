@@ -71,6 +71,11 @@
       <Value>libm</Value>
     </ListValues>
   </avrgcc.linker.libraries.Libraries>
+  <avrgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>D:\samue\Escritorio\OneDrive - UVG\UVG\Año 2024\Semestre 2\Digital 2\Practicas\Practica 3_2do semestre\LAB3\Maestro\UART</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.LibrarySearchPaths>
   <avrgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\2.1.506\include\</Value>
@@ -110,6 +115,11 @@
       <Value>libm</Value>
     </ListValues>
   </avrgcc.linker.libraries.Libraries>
+  <avrgcc.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>D:\samue\Escritorio\OneDrive - UVG\UVG\Año 2024\Semestre 2\Digital 2\Practicas\Practica 3_2do semestre\LAB3\Maestro\UART</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.LibrarySearchPaths>
   <avrgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\2.1.506\include\</Value>
@@ -120,12 +130,6 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ADC\ADC.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="ADC\ADC.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -137,7 +141,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ADC" />
     <Folder Include="UART" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
