@@ -66,10 +66,7 @@ void SPI_init()
 }
 
 
-void SPI_tx(uint8_t data)
-{
-	/* Cargar dato al registro */
-	SPDR = data;
-	/* Esperar a que la transmisión se realice */
-	while(!(SPSR & (1<<SPIF)));
-}
+
+	
+
+

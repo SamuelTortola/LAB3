@@ -21,22 +21,25 @@
 #include "SPI/SPI.h"
 #include "POT/POT.h"
 
-uint8_t datoRecibido = 0x00;
+uint8_t datoRecibido1 = 0x00;
+uint8_t datoRecibido2 = 0x00;
 
-uint8_t activa = 0;
+uint8_t activa = 0, menu2 = 0;
+int cambio = 0, MAYOR = 0, MENOR  = 0;
 volatile char receivedChar = 0;    //Variable que almacena el valor del UART
 
+	
 void setup(void);
 void setup(void){
 	cli();  //Apagar interrupciones
 	DDRD = 0xFF;  //Puerto D como salida
-	DDRC = 0;  //Puerto C como entrada
+	DDRC = 0x03;  //Puerto C como salida 
 	
 	initUART9600();  //Iniciar UART
 	SPI_init();
 	
 
-	
+	PORTD = 0x00;
 	sei(); //Activar interrupciones
 }
 
@@ -50,7 +53,7 @@ int main(void)
     while (1) 
     {
 		
-		if(activa == 0){
+		if(activa == 0 && menu2 ==0){
 			writeTextUART("\n\r     **************Hola como esta****************");   //Mostrar inicio
 			writeUART(10);
 			writeUART(13);
@@ -65,19 +68,79 @@ int main(void)
 		}
 		
 		if(receivedChar != 0){      //Si la variable que hay en USART es diferente de cero
-			SPI_slaveON(2);
-			SPI_tx(4);
-			datoRecibido = SPI_rx();
-			SPI_slaveOFF(2);
-			
-			if (datoRecibido >= 4)
+			if (receivedChar == '1' && menu2 == 0)
 			{
-				writeTextUART("si funciona el escalavo");
+			     
+				SPI_slaveON(2);
+				SPI_tx(1);
+				datoRecibido1 = SPI_rx();
+				SPI_slaveOFF(2);
+				
+				
+				SPI_slaveON(2);
+				SPI_tx(2);
+				datoRecibido2 = SPI_rx();
+				SPI_slaveOFF(2);			
+						
+			 POT(datoRecibido1, datoRecibido2);
+		
+				receivedChar = 0;
 			}
-			//writeTextUART("888");
 			
-			receivedChar = 0;
-    }
+			
+			if (receivedChar == '2' ){   //Si se elige modificar el valor del contador
+				menu2 = 1;
+				writeTextUART("Presione + para incrementar, - para decrementar, e para menu principal \n\r");
+				writeUART(10);
+				writeUART(13);
+				writeUART(10);
+				writeUART(13);
+				
+				receivedChar = 0;
+			}
+			
+			if (receivedChar == '+' && menu2 == 1){
+				cambio ++;
+				if (cambio >= 255)    //si el contador es mayor de 255, dejarlo en 255
+				{
+					cambio = 255;
+				}
+				CONTA(cambio);
+				
+				
+				PORTD = cambio << 2;  //Mostrar el valor del contador, con corrimiento hacia la derecha, de dos bits, muestra los primeros 6 bits
+				PORTC = cambio >>6;   //Mostrar el valor del contador, con corrimiento hacia la izquierda, muestra los ultimos 2 bits
+				receivedChar = 0;
+				 
+			}
+			
+			if (receivedChar == '-' && menu2 == 1){
+				cambio --;
+				
+				if (cambio <= 0)    //si el contador es mayor de 255, dejarlo en 255
+				{
+					cambio = 0;
+				}
+				CONTA(cambio);
+				PORTD = cambio << 2;  //Mostrar el valor del contador, con corrimiento hacia la derecha, de dos bits, muestra los primeros 6 bits
+				PORTC = cambio >>6;   //Mostrar el valor del contador, con corrimiento hacia la izquierda, muestra los ultimos 2 bits
+				receivedChar = 0;
+				
+			}
+			
+			if (receivedChar == 'e')
+			{
+				receivedChar = 0;
+				menu2 = 0;
+				activa = 0;
+				writeUART(10);  //Enviar un enter
+				writeUART(10);  //Enviar un enter
+				writeUART(10);  //Enviar un enter
+				writeUART(10);  //Enviar un enter
+				writeUART(10);  //Enviar un enter
+			}
+		}
+    
 	
 	
 

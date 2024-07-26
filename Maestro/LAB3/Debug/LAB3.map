@@ -20,29 +20,11 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .bss.MENOR     0x00000000        0x2 main.o
+ .bss.MAYOR     0x00000000        0x2 main.o
  .text          0x00000000        0x0 POT/pot.o
  .data          0x00000000        0x0 POT/pot.o
  .bss           0x00000000        0x0 POT/pot.o
- .rodata.str1.1
-                0x00000000       0x30 POT/pot.o
- .text.POT      0x00000000      0x4d6 POT/pot.o
- .progmem.gcc_sw_table.POT
-                0x00000000       0x78 POT/pot.o
- .data.lista    0x00000000        0xa POT/pot.o
- .bss.unidades  0x00000000        0x2 POT/pot.o
- .bss.decenas   0x00000000        0x2 POT/pot.o
- .bss.centenas  0x00000000        0x2 POT/pot.o
- .bss.millares  0x00000000        0x2 POT/pot.o
- .debug_info    0x00000000      0x42a POT/pot.o
- .debug_abbrev  0x00000000       0xd3 POT/pot.o
- .debug_loc     0x00000000       0xac POT/pot.o
- .debug_aranges
-                0x00000000       0x20 POT/pot.o
- .debug_ranges  0x00000000       0x10 POT/pot.o
- .debug_line    0x00000000      0x3c6 POT/pot.o
- .debug_str     0x00000000      0x1f5 POT/pot.o
- .comment       0x00000000       0x31 POT/pot.o
- .debug_frame   0x00000000       0x38 POT/pot.o
  .text          0x00000000        0x0 SPI/SPI.o
  .data          0x00000000        0x0 SPI/SPI.o
  .bss           0x00000000        0x0 SPI/SPI.o
@@ -54,8 +36,6 @@ Discarded input sections
  .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc   0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -88,7 +68,6 @@ Discarded input sections
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
  .text.libgcc.div
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
- .text.libgcc   0x00000000        0xc d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
  .text.libgcc.prologue
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
  .text.libgcc.builtins
@@ -134,8 +113,6 @@ Discarded input sections
  .bss           0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.mul
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
- .text.libgcc.div
-                0x00000000       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc   0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
  .text.libgcc.prologue
                 0x00000000        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
@@ -275,51 +252,55 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x242
+.text           0x00000000      0xbea
  *(.vectors)
  .vectors       0x00000000       0x68 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
                 0x00000000                __vectors
  *(.vectors)
  *(.progmem.gcc*)
-                0x00000068                . = ALIGN (0x2)
-                0x00000068                __trampolines_start = .
+ .progmem.gcc_sw_table.POT
+                0x00000068       0x78 POT/pot.o
+ .progmem.gcc_sw_table.CONTA
+                0x000000e0       0x3c POT/pot.o
+                0x0000011c                . = ALIGN (0x2)
+                0x0000011c                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000068        0x0 linker stubs
+ .trampolines   0x0000011c        0x0 linker stubs
  *(.trampolines*)
-                0x00000068                __trampolines_end = .
+                0x0000011c                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
-                0x00000068                . = ALIGN (0x2)
+                0x0000011c                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x00000068                __ctors_start = .
+                0x0000011c                __ctors_start = .
  *(.ctors)
-                0x00000068                __ctors_end = .
-                0x00000068                __dtors_start = .
+                0x0000011c                __ctors_end = .
+                0x0000011c                __dtors_start = .
  *(.dtors)
-                0x00000068                __dtors_end = .
+                0x0000011c                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x00000068        0x0 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x00000068                __init
+ .init0         0x0000011c        0x0 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x0000011c                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x00000068        0xc D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init2         0x0000011c        0xc D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x00000074       0x16 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
-                0x00000074                __do_copy_data
- .init4         0x0000008a       0x10 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
-                0x0000008a                __do_clear_bss
+ .init4         0x00000128       0x16 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
+                0x00000128                __do_copy_data
+ .init4         0x0000013e       0x10 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
+                0x0000013e                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -330,71 +311,84 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x0000009a        0x8 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
+ .init9         0x0000014e        0x8 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
  *(.init9)
  *(.text)
- .text          0x000000a2        0x4 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
-                0x000000a2                __vector_22
-                0x000000a2                __vector_1
-                0x000000a2                __vector_24
-                0x000000a2                __vector_12
-                0x000000a2                __bad_interrupt
-                0x000000a2                __vector_6
-                0x000000a2                __vector_3
-                0x000000a2                __vector_23
-                0x000000a2                __vector_25
-                0x000000a2                __vector_11
-                0x000000a2                __vector_13
-                0x000000a2                __vector_17
-                0x000000a2                __vector_19
-                0x000000a2                __vector_7
-                0x000000a2                __vector_5
-                0x000000a2                __vector_4
-                0x000000a2                __vector_9
-                0x000000a2                __vector_2
-                0x000000a2                __vector_21
-                0x000000a2                __vector_15
-                0x000000a2                __vector_8
-                0x000000a2                __vector_14
-                0x000000a2                __vector_10
-                0x000000a2                __vector_16
-                0x000000a2                __vector_20
-                0x000000a6                . = ALIGN (0x2)
+ .text          0x00000156        0x4 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
+                0x00000156                __vector_22
+                0x00000156                __vector_1
+                0x00000156                __vector_24
+                0x00000156                __vector_12
+                0x00000156                __bad_interrupt
+                0x00000156                __vector_6
+                0x00000156                __vector_3
+                0x00000156                __vector_23
+                0x00000156                __vector_25
+                0x00000156                __vector_11
+                0x00000156                __vector_13
+                0x00000156                __vector_17
+                0x00000156                __vector_19
+                0x00000156                __vector_7
+                0x00000156                __vector_5
+                0x00000156                __vector_4
+                0x00000156                __vector_9
+                0x00000156                __vector_2
+                0x00000156                __vector_21
+                0x00000156                __vector_15
+                0x00000156                __vector_8
+                0x00000156                __vector_14
+                0x00000156                __vector_10
+                0x00000156                __vector_16
+                0x00000156                __vector_20
+                0x0000015a                . = ALIGN (0x2)
  *(.text.*)
- .text.setup    0x000000a6       0x14 main.o
-                0x000000a6                setup
- .text.main     0x000000ba       0x8c main.o
-                0x000000ba                main
+ .text.setup    0x0000015a       0x18 main.o
+                0x0000015a                setup
+ .text.main     0x00000172      0x1e4 main.o
+                0x00000172                main
  .text.__vector_18
-                0x00000146       0x28 main.o
-                0x00000146                __vector_18
+                0x00000356       0x28 main.o
+                0x00000356                __vector_18
+ .text.POT      0x0000037e      0x4d6 POT/pot.o
+                0x0000037e                POT
+ .text.CONTA    0x00000854      0x266 POT/pot.o
+                0x00000854                CONTA
  .text.SPI_init
-                0x0000016e       0x3e SPI/SPI.o
-                0x0000016e                SPI_init
+                0x00000aba       0x3e SPI/SPI.o
+                0x00000aba                SPI_init
  .text.SPI_slaveON
-                0x000001ac        0xc SPI/SPI.o
-                0x000001ac                SPI_slaveON
+                0x00000af8        0xc SPI/SPI.o
+                0x00000af8                SPI_slaveON
  .text.SPI_slaveOFF
-                0x000001b8        0xc SPI/SPI.o
-                0x000001b8                SPI_slaveOFF
- .text.SPI_tx   0x000001c4        0xa SPI/SPI.o
-                0x000001c4                SPI_tx
- .text.SPI_rx   0x000001ce        0xa SPI/SPI.o
-                0x000001ce                SPI_rx
+                0x00000b04        0xc SPI/SPI.o
+                0x00000b04                SPI_slaveOFF
+ .text.SPI_tx   0x00000b10        0xa SPI/SPI.o
+                0x00000b10                SPI_tx
+ .text.SPI_rx   0x00000b1a        0xa SPI/SPI.o
+                0x00000b1a                SPI_rx
  .text.initUART9600
-                0x000001d8       0x36 UART/UART.o
-                0x000001d8                initUART9600
+                0x00000b24       0x36 UART/UART.o
+                0x00000b24                initUART9600
  .text.writeTextUART
-                0x0000020e       0x22 UART/UART.o
-                0x0000020e                writeTextUART
+                0x00000b5a       0x22 UART/UART.o
+                0x00000b5a                writeTextUART
  .text.writeUART
-                0x00000230        0xe UART/UART.o
-                0x00000230                writeUART
-                0x0000023e                . = ALIGN (0x2)
+                0x00000b7c        0xe UART/UART.o
+                0x00000b7c                writeUART
+ .text.libgcc.div
+                0x00000b8a       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
+                0x00000b8a                _div
+                0x00000b8a                __divmodhi4
+ .text.libgcc   0x00000bb2        0xc d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x00000bb2                __tablejump2__
+ .text.libgcc.div
+                0x00000bbe       0x28 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
+                0x00000bbe                __udivmodhi4
+                0x00000be6                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000023e        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x0000023e                _exit
-                0x0000023e                exit
+ .fini9         0x00000be6        0x0 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x00000be6                _exit
+                0x00000be6                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -413,46 +407,65 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000023e        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x00000be6        0x4 d:/programas/microchip studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000242                _etext = .
+                0x00000bea                _etext = .
 
-.data           0x00800100       0x94 load address 0x00000242
+.data           0x00800100      0x12a load address 0x00000bea
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.lista    0x00800100        0xa POT/pot.o
+                0x00800100                lista
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800100       0x94 main.o
+                0x0080010a       0xdb main.o
+ .rodata.str1.1
+                0x008001e5       0x45 POT/pot.o
  *(.gnu.linkonce.r*)
-                0x00800194                . = ALIGN (0x2)
-                0x00800194                _edata = .
-                0x00800194                PROVIDE (__data_end, .)
+                0x0080022a                . = ALIGN (0x2)
+                0x0080022a                _edata = .
+                0x0080022a                PROVIDE (__data_end, .)
 
-.bss            0x00800194        0x3
-                0x00800194                PROVIDE (__bss_start, .)
+.bss            0x0080022a        0xf
+                0x0080022a                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
  .bss.receivedChar
-                0x00800194        0x1 main.o
-                0x00800194                receivedChar
- .bss.activa    0x00800195        0x1 main.o
-                0x00800195                activa
- .bss.datoRecibido
-                0x00800196        0x1 main.o
-                0x00800196                datoRecibido
+                0x0080022a        0x1 main.o
+                0x0080022a                receivedChar
+ .bss.cambio    0x0080022b        0x2 main.o
+                0x0080022b                cambio
+ .bss.menu2     0x0080022d        0x1 main.o
+                0x0080022d                menu2
+ .bss.activa    0x0080022e        0x1 main.o
+                0x0080022e                activa
+ .bss.datoRecibido2
+                0x0080022f        0x1 main.o
+                0x0080022f                datoRecibido2
+ .bss.datoRecibido1
+                0x00800230        0x1 main.o
+                0x00800230                datoRecibido1
+ .bss.unidades  0x00800231        0x2 POT/pot.o
+                0x00800231                unidades
+ .bss.decenas   0x00800233        0x2 POT/pot.o
+                0x00800233                decenas
+ .bss.centenas  0x00800235        0x2 POT/pot.o
+                0x00800235                centenas
+ .bss.millares  0x00800237        0x2 POT/pot.o
+                0x00800237                millares
  *(COMMON)
-                0x00800197                PROVIDE (__bss_end, .)
-                0x00000242                __data_load_start = LOADADDR (.data)
-                0x000002d6                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00800239                PROVIDE (__bss_end, .)
+                0x00000bea                __data_load_start = LOADADDR (.data)
+                0x00000d14                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x00800197        0x0
+.noinit         0x00800239        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x00800197                _end = .
+                0x00800239                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -496,6 +509,7 @@ END GROUP
  *(.comment)
  .comment       0x00000000       0x30 main.o
                                  0x31 (size before relaxing)
+ .comment       0x00000030       0x31 POT/pot.o
  .comment       0x00000030       0x31 SPI/SPI.o
  .comment       0x00000030       0x31 UART/UART.o
 
@@ -519,60 +533,69 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xa0
+.debug_aranges  0x00000000       0xc8
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 main.o
  .debug_aranges
-                0x00000030       0x40 SPI/SPI.o
+                0x00000030       0x28 POT/pot.o
  .debug_aranges
-                0x00000070       0x30 UART/UART.o
+                0x00000058       0x40 SPI/SPI.o
+ .debug_aranges
+                0x00000098       0x30 UART/UART.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xab6
+.debug_info     0x00000000     0x11f0
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4      0x2b6 main.o
- .debug_info    0x000008aa      0x117 SPI/SPI.o
- .debug_info    0x000009c1       0xf5 UART/UART.o
+ .debug_info    0x000005f4      0x432 main.o
+ .debug_info    0x00000a26      0x5be POT/pot.o
+ .debug_info    0x00000fe4      0x117 SPI/SPI.o
+ .debug_info    0x000010fb       0xf5 UART/UART.o
 
-.debug_abbrev   0x00000000      0x7db
+.debug_abbrev   0x00000000      0x8e9
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2       0xe3 main.o
- .debug_abbrev  0x00000685       0x9f SPI/SPI.o
- .debug_abbrev  0x00000724       0xb7 UART/UART.o
+ .debug_abbrev  0x000005a2       0xf5 main.o
+ .debug_abbrev  0x00000697       0xfc POT/pot.o
+ .debug_abbrev  0x00000793       0x9f SPI/SPI.o
+ .debug_abbrev  0x00000832       0xb7 UART/UART.o
 
-.debug_line     0x00000000      0x54c
+.debug_line     0x00000000      0xbdb
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x134 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000134      0x194 main.o
- .debug_line    0x000002c8      0x158 SPI/SPI.o
- .debug_line    0x00000420      0x12c UART/UART.o
+ .debug_line    0x00000134      0x2ba main.o
+ .debug_line    0x000003ee      0x569 POT/pot.o
+ .debug_line    0x00000957      0x158 SPI/SPI.o
+ .debug_line    0x00000aaf      0x12c UART/UART.o
 
-.debug_frame    0x00000000       0xfc
+.debug_frame    0x00000000      0x158
  *(.debug_frame)
  .debug_frame   0x00000000       0x54 main.o
- .debug_frame   0x00000054       0x64 SPI/SPI.o
- .debug_frame   0x000000b8       0x44 UART/UART.o
+ .debug_frame   0x00000054       0x5c POT/pot.o
+ .debug_frame   0x000000b0       0x64 SPI/SPI.o
+ .debug_frame   0x00000114       0x44 UART/UART.o
 
-.debug_str      0x00000000      0x445
+.debug_str      0x00000000      0x4b8
  *(.debug_str)
  .debug_str     0x00000000      0x208 D:/Programas/Microchip studio/7.0/Packs/Atmel/ATmega_DFP/2.1.506/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208      0x1fe main.o
-                                0x237 (size before relaxing)
- .debug_str     0x00000406       0x18 SPI/SPI.o
+ .debug_str     0x00000208      0x22c main.o
+                                0x265 (size before relaxing)
+ .debug_str     0x00000434       0x45 POT/pot.o
+                                0x201 (size before relaxing)
+ .debug_str     0x00000479       0x18 SPI/SPI.o
                                 0x1e1 (size before relaxing)
- .debug_str     0x0000041e       0x27 UART/UART.o
+ .debug_str     0x00000491       0x27 UART/UART.o
                                 0x1ea (size before relaxing)
 
-.debug_loc      0x00000000       0xc5
+.debug_loc      0x00000000      0x1e6
  *(.debug_loc)
  .debug_loc     0x00000000       0x3c main.o
- .debug_loc     0x0000003c       0x42 SPI/SPI.o
- .debug_loc     0x0000007e       0x47 UART/UART.o
+ .debug_loc     0x0000003c      0x121 POT/pot.o
+ .debug_loc     0x0000015d       0x42 SPI/SPI.o
+ .debug_loc     0x0000019f       0x47 UART/UART.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -592,11 +615,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0x70
+.debug_ranges   0x00000000       0x88
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x20 main.o
- .debug_ranges  0x00000020       0x30 SPI/SPI.o
- .debug_ranges  0x00000050       0x20 UART/UART.o
+ .debug_ranges  0x00000020       0x18 POT/pot.o
+ .debug_ranges  0x00000038       0x30 SPI/SPI.o
+ .debug_ranges  0x00000068       0x20 UART/UART.o
 
 .debug_macro
  *(.debug_macro)

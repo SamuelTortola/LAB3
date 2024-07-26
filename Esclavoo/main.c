@@ -9,6 +9,7 @@
 //******************************************************************************
 //CODIGO DEL ESCLAVO
 
+
 #define F_CPU 16000000
 #include <avr/io.h>
 #include <stdint.h>
@@ -19,44 +20,39 @@
 
 
 #include "ADC/ADC.h"   //Incluir libreria de ADC
-#include "SPI/SPI.h"
+#include "SPI/SPI.h"   //Incluir libreria SPI
 
-
-uint8_t caso = 0, Val1 = 0, Val2 = 0;
+uint8_t Val1 = 0, Val2 = 0, caso = 0;    //Variables de procesamiento
 
 
 
 void setup(void);
 void setup(void){
 	cli();  //Apagar interrupciones
-	DDRD = 0xFF;  //Puerto D como salida
-	DDRC = 0;  //Puerto C como entrada
+	DDRC =0;  //Puerto C como entrada
 	
-	
-	initADC(); //Iniciar ADC
 	SPI_init();
 	SPCR |= (1<<SPIE); //Activar interrupcion SPI
-		
+	
+	initADC(); //Iniciar ADC
+	
 	sei(); //Activar interrupciones
 }
+
 
 
 int main(void)
 {
 	setup();
 	
-	while (1)
-	{
-		
-		
-		
-		
+    while (1) 
+    {   
+	
 		ADCSRA |=(1<<ADSC);  //Leer ADC
-		_delay_ms(10);
-
-
-
-	}
+		_delay_ms(70);   //Retardo para evitar malos procesamientos del Atmega328P
+		
+		 
+    }
 }
 
 
@@ -79,18 +75,23 @@ ISR(ADC_vect){
 	}
 	
 	ADCSRA |= (1<<ADIF); //Se borra la bandera de interrupción
+
 }
+
 
 
 ISR(SPI_STC_vect){
 	uint8_t SPIVALOR = SPDR;
+
 	
 	if (SPIVALOR == 1)  //Si el maestro quiere ver el valor de los potenciometros
 	{
-		SPI_tx(Val1);
+	   SPDR = Val2;
 	}
 	
-	
+	if (SPIVALOR == 2)  //Si el maestro quiere ver el valor de los potenciometros
+	{
+		SPDR = Val1;
+	}
+
 }
-
-
