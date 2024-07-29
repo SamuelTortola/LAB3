@@ -9,5 +9,6 @@
 
 void POT(uint8_t VA1, uint8_t VA2);
 void CONTA(uint8_t cambi);
+void USANDOPYTHON(uint8_t activar);
 
 #endif

@@ -49,7 +49,7 @@ int main(void)
     {   
 	
 		ADCSRA |=(1<<ADSC);  //Leer ADC
-		_delay_ms(70);   //Retardo para evitar malos procesamientos del Atmega328P
+		_delay_ms(20);   //Retardo para evitar malos procesamientos del Atmega328P
 		
 		 
     }
